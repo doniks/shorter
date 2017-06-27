@@ -3,6 +3,7 @@
 set(
     shorts_src
     main.cpp
+    networkmanager.cpp
     CachingNetworkManagerFactory.cpp
     shorts.qrc
     xml2json/utilities.cpp
