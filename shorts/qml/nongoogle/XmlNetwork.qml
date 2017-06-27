@@ -38,7 +38,7 @@ QtObject {
                 __doc = null
                 loadResult(resObj)
             } else {
-                console.log("doc.readyState is not DONE, but:", doc.readyState)
+                //console.log("doc.readyState is not DONE, but:", doc.readyState)
             }
         }
 
