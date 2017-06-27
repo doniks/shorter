@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-27 17:48+0000\n"
+"POT-Creation-Date: 2017-06-27 18:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgid "Add feeds"
 msgstr ""
 
 #: ../qml/nongoogle/AppendNGFeedPage.qml:40
-#: ../qml/pages/TopicManagementPage.qml:21 ../qml/shorts-app.qml:366
+#: ../qml/pages/TopicManagementPage.qml:21 ../qml/shorts-app.qml:368
 msgid "Cancel"
 msgstr ""
 
@@ -61,7 +61,6 @@ msgid "Next"
 msgstr ""
 
 #: ../qml/nongoogle/AppendNGFeedPage.qml:122
-#: ../qml/pages/AppendFeedPage.qml:170
 msgid "Type a keyword or URL"
 msgstr ""
 
@@ -90,11 +89,15 @@ msgstr ""
 msgid "Failed to perform a feed search by URL"
 msgstr ""
 
-#: ../qml/pages/AppendFeedPage.qml:218
+#: ../qml/pages/AppendFeedPage.qml:170
+msgid "Enter an URL"
+msgstr ""
+
+#: ../qml/pages/AppendFeedPage.qml:235
 msgid "Search results"
 msgstr ""
 
-#: ../qml/pages/AppendFeedPage.qml:262 ../qml/pages/CreateTopicPage.qml:145
+#: ../qml/pages/AppendFeedPage.qml:279 ../qml/pages/CreateTopicPage.qml:145
 msgid "No feeds"
 msgstr ""
 
@@ -187,7 +190,7 @@ msgstr ""
 msgid "All articles"
 msgstr ""
 
-#: ../qml/pages/MainPage.qml:185 ../qml/shorts-app.qml:192
+#: ../qml/pages/MainPage.qml:185 ../qml/shorts-app.qml:194
 msgid "Saved"
 msgstr ""
 
@@ -244,23 +247,23 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: ../qml/shorts-app.qml:200 shorter.desktop.in.in.h:1
+#: ../qml/shorts-app.qml:202 shorter.desktop.in.in.h:1
 msgid "Shorter"
 msgstr ""
 
-#: ../qml/shorts-app.qml:358
+#: ../qml/shorts-app.qml:360
 msgid "Checking for new articles"
 msgstr ""
 
-#: ../qml/shorts-app.qml:382
+#: ../qml/shorts-app.qml:384
 msgid "Perhaps some of the channels have not been updated."
 msgstr ""
 
-#: ../qml/shorts-app.qml:383
+#: ../qml/shorts-app.qml:385
 msgid "Errors occurred during the update"
 msgstr ""
 
-#: ../qml/shorts-app.qml:397
+#: ../qml/shorts-app.qml:399
 msgid "Ok"
 msgstr ""
 
