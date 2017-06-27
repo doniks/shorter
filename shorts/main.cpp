@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
-    app.setApplicationName("com.ubuntu.shorts");
+    app.setApplicationName("doniks.shorter");
 
     //qSetMessagePattern("%{file}- %{line}: %{function} M: %{message}");
 

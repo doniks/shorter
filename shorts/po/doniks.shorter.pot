@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-27 17:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../qml/components/ArticleViewItem.qml:120
+msgid "Select article"
+msgstr ""
+
+#: ../qml/components/ReadingOptions.qml:45
+msgid "Dark"
+msgstr ""
+
+#: ../qml/components/ReadingOptions.qml:52
+msgid "Light"
+msgstr ""
+
+#: ../qml/components/ReadingOptions.qml:102
+msgid "Small"
+msgstr ""
+
+#: ../qml/components/ReadingOptions.qml:104
+msgid "Normal"
+msgstr ""
+
+#: ../qml/components/ReadingOptions.qml:105
+msgid "Large"
+msgstr ""
+
+#: ../qml/content/SharePage.qml:10
+msgid "Sharing"
+msgstr ""
+
+#: ../qml/nongoogle/AppendNGFeedPage.qml:35 ../qml/pages/AppendFeedPage.qml:38
+#: ../qml/pages/MainPage.qml:388
+msgid "Add feeds"
+msgstr ""
+
+#: ../qml/nongoogle/AppendNGFeedPage.qml:40
+#: ../qml/pages/TopicManagementPage.qml:21 ../qml/shorts-app.qml:366
+msgid "Cancel"
+msgstr ""
+
+#: ../qml/nongoogle/AppendNGFeedPage.qml:52 ../qml/pages/AppendFeedPage.qml:56
+msgid "Next"
+msgstr ""
+
+#: ../qml/nongoogle/AppendNGFeedPage.qml:122
+#: ../qml/pages/AppendFeedPage.qml:170
+msgid "Type a keyword or URL"
+msgstr ""
+
+#: ../qml/nongoogle/AppendNGFeedPage.qml:175
+msgid "Feed Title:"
+msgstr ""
+
+#: ../qml/nongoogle/AppendNGFeedPage.qml:183
+#: ../qml/nongoogle/AppendNGFeedPage.qml:198
+msgid "No data"
+msgstr ""
+
+#: ../qml/nongoogle/AppendNGFeedPage.qml:190
+msgid "Feed Description:"
+msgstr ""
+
+#: ../qml/pages/AppendFeedPage.qml:102
+msgid "Failed to perform a feed search by keyword"
+msgstr ""
+
+#: ../qml/pages/AppendFeedPage.qml:103 ../qml/pages/AppendFeedPage.qml:134
+msgid "Search failed"
+msgstr ""
+
+#: ../qml/pages/AppendFeedPage.qml:133
+msgid "Failed to perform a feed search by URL"
+msgstr ""
+
+#: ../qml/pages/AppendFeedPage.qml:218
+msgid "Search results"
+msgstr ""
+
+#: ../qml/pages/AppendFeedPage.qml:262 ../qml/pages/CreateTopicPage.qml:145
+msgid "No feeds"
+msgstr ""
+
+#: ../qml/pages/ArticleViewPage.qml:25
+msgid "Feed"
+msgstr ""
+
+#: ../qml/pages/ArticleViewPage.qml:29
+msgid "Open site"
+msgstr ""
+
+#: ../qml/pages/ArticleViewPage.qml:37
+msgid "Save"
+msgstr ""
+
+#: ../qml/pages/ArticleViewPage.qml:37
+msgid "Remove"
+msgstr ""
+
+#: ../qml/pages/ArticleViewPage.qml:50
+msgid "Share..."
+msgstr ""
+
+#: ../qml/pages/ArticleViewPage.qml:60
+msgid "Options"
+msgstr ""
+
+#: ../qml/pages/ChooseTopicPage.qml:13 ../qml/pages/ChooseTopicPage.qml:18
+msgid "Choose topic"
+msgstr ""
+
+#: ../qml/pages/ChooseTopicPage.qml:82
+msgid "Add your new feeds to a topic"
+msgstr ""
+
+#: ../qml/pages/ChooseTopicPage.qml:93
+msgid " + New topic"
+msgstr ""
+
+#: ../qml/pages/ChooseTopicPage.qml:113 ../qml/pages/CreateTopicPage.qml:43
+msgid "A topic with this name already exists"
+msgstr ""
+
+#: ../qml/pages/ChooseTopicPage.qml:114 ../qml/pages/ChooseTopicPage.qml:127
+#: ../qml/pages/CreateTopicPage.qml:33 ../qml/pages/CreateTopicPage.qml:44
+msgid "Warning"
+msgstr ""
+
+#: ../qml/pages/ChooseTopicPage.qml:126 ../qml/pages/CreateTopicPage.qml:32
+msgid "Topic name can't contain only whitespaces"
+msgstr ""
+
+#: ../qml/pages/CreateTopicPage.qml:19
+msgid "Create new topic"
+msgstr ""
+
+#: ../qml/pages/CreateTopicPage.qml:23 ../qml/pages/TopicManagementPage.qml:58
+msgid "Add topic"
+msgstr ""
+
+#: ../qml/pages/CreateTopicPage.qml:91
+msgid "Type topic name"
+msgstr ""
+
+#: ../qml/pages/CreateTopicPage.qml:107
+msgid "Select feeds (optional)"
+msgstr ""
+
+#: ../qml/pages/EditFeedPage.qml:16
+msgid "Edit Feed"
+msgstr ""
+
+#: ../qml/pages/EditFeedPage.qml:21
+msgid "Done"
+msgstr ""
+
+#: ../qml/pages/EditFeedPage.qml:85
+msgid "Title: "
+msgstr ""
+
+#: ../qml/pages/EditFeedPage.qml:105
+msgid "URL: "
+msgstr ""
+
+#: ../qml/pages/EditFeedPage.qml:122
+msgid "Topic: "
+msgstr ""
+
+#: ../qml/pages/MainPage.qml:154
+msgid "All articles"
+msgstr ""
+
+#: ../qml/pages/MainPage.qml:185 ../qml/shorts-app.qml:192
+msgid "Saved"
+msgstr ""
+
+#: ../qml/pages/MainPage.qml:238
+msgid "Topics"
+msgstr ""
+
+#: ../qml/pages/MainPage.qml:268
+msgid "Edit"
+msgstr ""
+
+#: ../qml/pages/MainPage.qml:366 ../qml/pages/SettingsPage.qml:14
+msgid "Settings"
+msgstr ""
+
+#: ../qml/pages/MainPage.qml:449
+msgid "No topics"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:44
+msgid ""
+"For those who living in some special regions cannot access Google, the "
+"switch below can disable Google RSS engine, Shorts will directly get data "
+"from RSS sources."
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:54
+msgid "Use Google Search: "
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:76
+msgid ""
+"You can use Yandex.Disk cloud storage service to sync your feeds across "
+"devices."
+msgstr ""
+
+#: ../qml/pages/TopicManagementPage.qml:16
+msgid "Edit topics"
+msgstr ""
+
+#: ../qml/pages/TopicManagementPage.qml:34
+msgid "Back"
+msgstr ""
+
+#: ../qml/pages/TopicManagementPage.qml:46
+msgid "Confirm"
+msgstr ""
+
+#: ../qml/pages/TopicManagementPage.qml:127
+msgid "Add feed"
+msgstr ""
+
+#: ../qml/pages/YadLoginPage.qml:30
+msgid "Log in"
+msgstr ""
+
+#: ../qml/shorts-app.qml:200 shorter.desktop.in.in.h:1
+msgid "Shorter"
+msgstr ""
+
+#: ../qml/shorts-app.qml:358
+msgid "Checking for new articles"
+msgstr ""
+
+#: ../qml/shorts-app.qml:382
+msgid "Perhaps some of the channels have not been updated."
+msgstr ""
+
+#: ../qml/shorts-app.qml:383
+msgid "Errors occurred during the update"
+msgstr ""
+
+#: ../qml/shorts-app.qml:397
+msgid "Ok"
+msgstr ""
+
+#: ../qml/tabs/BaseTab.qml:32
+msgid "Refresh"
+msgstr ""
+
+#: ../qml/tabs/BaseTab.qml:38
+msgid "Grid View"
+msgstr ""
+
+#: ../qml/tabs/BaseTab.qml:38
+msgid "List view"
+msgstr ""
+
+#: ../qml/tabs/BaseTab.qml:47
+msgid "Disable night mode"
+msgstr ""
+
+#: ../qml/tabs/BaseTab.qml:47
+msgid "Enable night mode"
+msgstr ""
+
+#: ../qml/tabs/BaseTab.qml:187
+msgid "There are no articles to show"
+msgstr ""
+
+#. TRANSLATORS: this is a time formatting string,
+#. see http://qt-project.org/doc/qt-5.0/qtqml/qml-qtquick2-date.html#details for valid expressions
+#: ../qml/utils/dateutils.js:39
+msgid "MMMM d"
+msgstr ""
+
+#: ../qml/utils/dateutils.js:54
+#, qt-format
+msgid "Yesterday at %1"
+msgstr ""
+
+#. TRANSLATORS: this is a time formatting string,
+#. see http://qt-project.org/doc/qt-5.0/qtqml/qml-qtquick2-date.html#details for valid expressions
+#: ../qml/utils/dateutils.js:57
+msgid "h:mm AP"
+msgstr ""
+
+#. TRANSLATORS: this is a time formatting string,
+#. see http://qt-project.org/doc/qt-5.0/qtqml/qml-qtquick2-date.html#details for valid expressions
+#: ../qml/utils/dateutils.js:69
+msgid "ddd, h:mm AP"
+msgstr ""
+
+#: ../qml/utils/dateutils.js:76
+msgid "A few seconds ago..."
+msgstr ""
+
+#: ../qml/utils/dateutils.js:79
+#, qt-format
+msgid "%1 minute ago"
+msgid_plural "%1 minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../qml/utils/dateutils.js:83
+#, qt-format
+msgid "%1 hour ago"
+msgid_plural "%1 hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../qml/utils/dateutils.js:89
+#, qt-format
+msgid "%1 day ago"
+msgid_plural "%1 days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: shorter.desktop.in.in.h:2
+msgid "shorts;shorter;news;rss;reader;"
+msgstr ""

@@ -1,22 +1,18 @@
 {
     "architecture": "@CLICK_ARCH@",
-    "description": "RSS Reader application",
+    "description": "News Reader",
     "framework": "ubuntu-sdk-15.04.4",
     "hooks": {
         "shorts": {
-            "apparmor": "shorts.apparmor",
+            "apparmor": "shorter.apparmor",
             "desktop": "@DESKTOP_FILE@"
         }
     },
     "icon": "@ICON@",
-    "maintainer": "Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>",
+    "maintainer": "Peter Putz <p.putz@yahoo.de>",
     "name": "@PROJECT_NAME@",
-    "title": "Shorts",
-    "version": "3.2.@BZR_REVNO@",
-    "x-source": {
-        "vcs-bzr": "@BZR_SOURCE@",
-        "vcs-bzr-revno": "@BZR_REVNO@"
-    },
+    "title": "Shorter",
+    "version": "4.0",
     "x-test": {
         "autopilot": "@AUTOPILOT_DIR@"
     }

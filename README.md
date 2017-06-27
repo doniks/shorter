@@ -1,2 +1,2 @@
-# shorts
-Ubuntu Phone RSS Reader app.
+# shorter
+Ubuntu Phone News Reader

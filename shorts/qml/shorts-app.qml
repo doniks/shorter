@@ -15,7 +15,7 @@ MainView {
     id: mainView
 
     objectName: "mainView"
-    applicationName: "shorts-app.mrqtros"
+//    applicationName: "doniks.shorter"
     anchorToKeyboard: true
 
     width: units.gu(46)
@@ -197,7 +197,7 @@ MainView {
             id: shortsTab
 
             objectName: "Tab0"
-            tabTitle: i18n.tr("Shorts")
+            tabTitle: i18n.tr("Shorter")
             topicId: 0
         }
 

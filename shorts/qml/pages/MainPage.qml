@@ -46,7 +46,7 @@ Page {
 
             Label {
                 id: textTitle
-                text: "Shorts"
+                text: "Shorter"
                 color: "#EB6536"
                 style: Text.Raised
                 styleColor: "black"
@@ -61,7 +61,7 @@ Page {
 
             Label {
                 id: textSubtitle
-                text: "Ubuntu RSS Reader"
+                text: "News Reader"
                 color: "#EB6536"
                 style: Text.Raised
                 styleColor: "black"
