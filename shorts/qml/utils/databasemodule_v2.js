@@ -60,10 +60,14 @@ function adjustDb(dbParams) {
         addFeedTag(3, 1)
 
         
-        addTag("Linux");
+        addTag("Linux")
         addFeed("Phoronix", "http://www.phoronix.com/rss.php")
         addFeedTag(4, 2)
-        
+
+        addTag("Ubports")
+        addFeed("Ubports", "http://blog.ubports.com/feed")
+        addFeedTag(5, 3)
+
         // MainView must refresh articles.
         dbParams.isRefreshRequired = true
     }
