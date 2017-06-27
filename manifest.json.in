@@ -12,8 +12,5 @@
     "maintainer": "Peter Putz <p.putz@yahoo.de>",
     "name": "@PROJECT_NAME@",
     "title": "Shorter",
-    "version": "4.0",
-    "x-test": {
-        "autopilot": "@AUTOPILOT_DIR@"
-    }
+    "version": "4.1"
 }
