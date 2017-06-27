@@ -80,7 +80,7 @@ Item {
         property string dbVersion: "1.2"
         property bool useDarkTheme: false
         property bool useListMode: false
-        property bool useGoogleSearch: true
+        property bool useGoogleSearch: false
         property int fontSize: 1
         property string yadToken: ""
     }
