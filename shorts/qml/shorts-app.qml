@@ -28,15 +28,17 @@ MainView {
     }
 
     function configureDb() {
-        var dbParams = {"isRefreshRequired" : false,
+        var dbParams = {
+            "isRefreshRequired" : false,
             "oldDbVersion" : optionsKeeper.dbVersion(),
             "newDbVersion" : ""
         }
 
         DB.adjustDb(dbParams)
 
-        if (dbParams.oldDbVersion != dbParams.newDbVersion)
-            optionsKeeper.dbVersion = dbParams.newDbVersion
+        if (dbParams.oldDbVersion != dbParams.newDbVersion) {
+            optionsKeeper.setDbVersion(dbParams.newDbVersion)
+        }
 
         if (dbParams.isRefreshRequired)
              refresh()
