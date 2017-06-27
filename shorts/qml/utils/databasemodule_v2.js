@@ -51,19 +51,19 @@ function adjustDb(dbParams) {
     })
 
     if (tagCount === 0) {
-        addTag("Ubuntu")
-        addFeed("Developer" , "http://developer.ubuntu.com/feed/")
-        addFeed("Design" , "http://design.canonical.com/feed/")
-        addFeedTag(1, 1)
-        addFeedTag(2, 1)
         addTag("Canonical")
-        addFeed("Voices" , "http://voices.canonical.com/feed/atom/")
+        addFeed("Design" , "http://design.canonical.com/feed/")
         addFeed("Insights" , "http://insights.ubuntu.com/feed/")
         addFeed("Blog" , "http://blog.canonical.com/feed/")
-        addFeedTag(3, 2)
-        addFeedTag(4, 2)
-        addFeedTag(5, 2)
+        addFeedTag(1, 1)
+        addFeedTag(2, 1)
+        addFeedTag(3, 1)
 
+        
+        addTag("Linux");
+        addFeed("Phoronix", "http://www.phoronix.com/rss.php")
+        addFeedTag(4, 2)
+        
         // MainView must refresh articles.
         dbParams.isRefreshRequired = true
     }
