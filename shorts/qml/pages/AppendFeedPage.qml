@@ -167,7 +167,7 @@ Page {
             objectName: "tfFeedUrl"
             id: tfFeedUrl
 
-            placeholderText: i18n.tr("Type a keyword or URL")
+            placeholderText: i18n.tr("Enter an URL")
 
             width: parent.width - units.gu(4)
             // height:units.gu(5)
@@ -200,14 +200,31 @@ Page {
 
                 // Very simple logic, URL if there are no spaces and contains dots.
                 // But simple not means that it is wrong.
-                var isUrlEntered = (userInput.indexOf(" ") === -1 && userInput.indexOf(".") !== -1)
+                var isUrlEntered = ( userInput.indexOf(" ") === -1 &&                     
+                                     userInput.indexOf(".") !== -1)
 
                 if (isUrlEntered) {
-                    if (userInput.indexOf("http://") !== 0)
+                    console.log("url")
+                    if (userInput.indexOf("http://") !== 0) {
                         userInput = "http://" + userInput
-                    googleFeedApi.loadFeed(userInput)
+		    }
+
+                    // FIXME: find the actual title etc without the broken google api
+                    // googleFeedApi.loadFeed(userInput)
+                    searchResultsModel.append(
+                        { "url" : userInput,
+                          "title" : userInput,
+                          "description" : userInput,
+                          "link" : userInput,
+                          "isSelected" : true
+                            
+                        } )
                 }
-                else googleFeedApi.findFeeds(text)
+                else 
+                {
+                    console.log("not url")
+                    googleFeedApi.findFeeds(text)
+                }
             }
         }
 

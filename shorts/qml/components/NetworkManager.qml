@@ -60,9 +60,11 @@ Item {
             }
 
             currentFeed = feedList.shift()
-            if (__useGFA)
+            if (__useGFA) {
                 googleFeedApi.loadFeed(currentFeed.source)
-            else nonGoogleFeedApi.loadFeed(currentFeed.source)
+            } else { 
+	        nonGoogleFeedApi.loadFeed(currentFeed.source)
+	    }
         }
 
         function cancelDownload() {
@@ -70,7 +72,8 @@ Item {
             operationStatus = "abort"
             if (__useGFA)
                 googleFeedApi.abort()
-            else nonGoogleFeedApi.abort()
+            else 
+                nonGoogleFeedApi.abort()
         }
 
         function updateFeedInfo(feedId, feedLink, responseData) {
@@ -159,6 +162,7 @@ Item {
                     "media_groups" : ""
                 }
 
+                console.log(i, temp.title)
                 newArticles.push(temp)
             }
 
@@ -182,6 +186,7 @@ Item {
 
         property var googleFeedApi: GoogleFeedApi {
             onLoadResult: {
+                console.log("googleFeedApi", result.rss, result.responseStatus)
                 if (result.responseStatus !== 200) {
                     console.log("XML NETWORK GFA:", JSON.stringify(result))
                     if (operationStatus == "success")
@@ -194,11 +199,32 @@ Item {
 
         property var nonGoogleFeedApi: XmlNetwork {
             onLoadResult: {
-                if (!result.rss) {
+                console.log("nonGoogleFeedApi", result.rss, result.responseStatus)
+                if ( result.rss ) {
+                    console.log("result.rss")
+                    d.updateFeedInfoNg(d.currentFeed.id, d.currentFeed.link, result.rss.channel)
+                } else if (result.feed) {
+                    console.log("result.feed")
+                    // I think this means Atom format instead of RSS format, and
+                    // that currently doesn't work
+                    // but, e.g., ubports uses this!
+                    // FIXME!
+                    if (operationStatus == "success")
+                        operationStatus = "withErrors"
+                } else {
+                    console.log("!result.rss", 
+                                "rss", result.rss, 
+                                "json", result.json, 
+                                "atom", result.atom, 
+                                "feed", result.feed,
+                                "xml", result.xml,
+                                "xmlns", result.xmlns
+                               )
+                    console.log("operationStatus", operationStatus)
                     console.log("XML NETWORK NGA:", JSON.stringify(result))
                     if (operationStatus == "success")
                         operationStatus = "withErrors"
-                } else d.updateFeedInfoNg(d.currentFeed.id, d.currentFeed.link, result.rss.channel)
+                }
 
                 d.updateNextFeed()
             }
