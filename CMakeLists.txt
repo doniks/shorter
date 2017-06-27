@@ -74,7 +74,7 @@ if(CLICK_MODE)
     file(GLOB CLICK_FILES
          RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
          *.json *.json.in *.apparmor)
-    add_custom_target(doniks_shorter_CLICKFiles ALL SOURCES ${CLICK_FILES})
+    add_custom_target(click_files ALL SOURCES ${CLICK_FILES})
 else(CLICK_MODE)
     message("NOT CLICK_MODE")
     set(DATA_DIR ${CMAKE_INSTALL_DATADIR}/${APP_NAME})
@@ -97,7 +97,7 @@ list(SORT I18N_SRC_FILES)
 
 # for icon
 file(GLOB DESKTOP_ICON *.png)
-add_custom_target(ubuntu-rssreader-app_icons ALL SOURCES ${DESKTOP_ICON})
+add_custom_target(icons ALL SOURCES ${DESKTOP_ICON})
 install(FILES ${DESKTOP_ICON} DESTINATION ${DESKTOP_DIR})
 
 configure_file(${DESKTOP_FILE}.in.in ${DESKTOP_FILE}.in)
