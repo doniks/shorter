@@ -17,12 +17,6 @@ clickable
 
 This should retrieve the source code, build it, install it on the device and run the application. 
 
-It seems that the application log file gets removed immediately when the application terminiates. So, to debug the application, I do the following:
-Open a terminal session on the device and execute 
-```
-while ! tail -n 100 -f ~/.cache/upstart/application-click-*shorter*.log  ; do sleep 0.1 ; done
-```
-
 I'm happy to receive your contribution, just get in touch on github!
 
 Doniks
