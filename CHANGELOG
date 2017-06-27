@@ -1,19 +1,4 @@
-ubuntu-rssreader-app (0.3) raring; urgency=medium
-
-  * New icon 
-  * Update click framework and apparmor profile version (LP: #1315318)  
-
- -- Alan Pope <popey@ubuntu.com>  Fri, 02 May 2014 12:10:30 +0100
-
-ubuntu-rssreader-app (0.2) saucy; urgency=low
-
-  * Added translations support, dropped ubuntu- prefix from desktop file 
-    and installation path
-
- -- David Planella <david.planella@ubuntu.com>  Thu, 26 Sep 2013 09:29:27 +0200
-
-ubuntu-rssreader-app (0.1) raring; urgency=low
-
-  * Initial release
-
- -- Michael Hall <mhall119@ubuntu.com>  Mon, 11 Feb 2013 16:04:00 -0500
+4.1
+ - fix most basic functionality
+4.0
+- fork Shorts reboot
