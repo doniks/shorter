@@ -1,11 +1,13 @@
 # shorter
 Shorter is a news reader for Ubuntu Touch (ubports.com)
 
-Shorter was forked from Shorts reboot, which in turn was a fork of Shorts
+Shorter was forked from Shorts reboot, which in turn was forked from Shorts
 
 # hacking
 
 So you want to hack on Shorter? Awesome! Do the following:
+
+Install https://github.com/bhdouglass/clickable 
 
 Connect your Ubuntu Touch device with an USB cable and then on the console execute
 
