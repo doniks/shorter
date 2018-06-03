@@ -51,22 +51,24 @@ function adjustDb(dbParams) {
     })
 
     if (tagCount === 0) {
-        addTag("Canonical")
-        addFeed("Design" , "http://design.canonical.com/feed/")
-        addFeed("Insights" , "http://insights.ubuntu.com/feed/")
-        addFeed("Blog" , "http://blog.canonical.com/feed/")
-        addFeedTag(1, 1)
-        addFeedTag(2, 1)
-        addFeedTag(3, 1)
 
-        
         addTag("Linux")
         addFeed("Phoronix", "http://www.phoronix.com/rss.php")
-        addFeedTag(4, 2)
+        addFeedTag(1, 1)
 
-        addTag("Ubports")
-        addFeed("Ubports", "http://blog.ubports.com/feed")
-        addFeedTag(5, 3)
+//        addTag("Canonical")
+//        addFeed("Design" , "http://design.canonical.com/feed/")
+//        addFeed("Insights" , "http://insights.ubuntu.com/feed/")
+//        addFeed("Blog" , "http://blog.canonical.com/feed/")
+//        addFeedTag(2, 1)
+//        addFeedTag(3, 1)
+
+        
+//        addFeedTag(4, 2)
+
+//        addTag("Ubports")
+//        addFeed("Ubports", "http://ubports.com/blog/1/feed")
+//        addFeedTag(5, 3)
 
         // MainView must refresh articles.
         dbParams.isRefreshRequired = true
@@ -529,7 +531,6 @@ function loadTagsEx()
     return dbResult;
 }
 
-// insert
 function addTag(name)
 {
     var dbResult
@@ -556,7 +557,6 @@ function addTag(name)
     return dbResult;
 }
 
-// update
 function updateTag(id, name) {
     var db = openStdDataBase()
     var dbResult
@@ -568,7 +568,6 @@ function updateTag(id, name) {
     return dbResult
 }
 
-// delete
 function deleteTag(id)
 {
     var db = openStdDataBase()
@@ -582,12 +581,6 @@ function deleteTag(id)
 }
 
 
-/* feed_tag operations
- * include select, insert and delete operations
- *
- *
- */
-// select
 function loadFeedTags()
 {
     var db = openStdDataBase()
@@ -633,7 +626,6 @@ function addFeedTag(feed_id, tag_id)
     return dbResult
 }
 
-// delete
 function deleteFeedTag(id) {
     var db = openStdDataBase()
     var dbResult
@@ -645,7 +637,6 @@ function deleteFeedTag(id) {
     return dbResult
 }
 
-// delete
 function deleteFeedTagsByTagId(tagId) {
     var db = openStdDataBase()
     var dbResult
