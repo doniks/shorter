@@ -178,27 +178,45 @@ void traverse_node(rapidxml::xml_node<> *xmlnode, rapidjson::Value &jsvalue, rap
 
 std::string xml2json(const char *xml_str)
 {
-    //file<> fdoc("track_orig.xml");
-    rapidxml::xml_document<> doc;
-    doc.parse<0>(const_cast<char *>(xml_str));
-
-    rapidjson::Document document;
-    document.SetObject();
-    rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
-
-    rapidxml::xml_node<> *xmlnode_chd;
-
-    for (xmlnode_chd = doc.first_node(); xmlnode_chd; xmlnode_chd = xmlnode_chd->next_sibling())
-    {
-        //cout << xmlnode_chd->name() << endl;
-        rapidjson::Value jsvalue_chd;
-        jsvalue_chd.SetObject();
-        traverse_node(xmlnode_chd, jsvalue_chd, allocator);
-        document.AddMember(rapidjson::StringRef(xmlnode_chd->name()), jsvalue_chd, allocator);
-    }
     rapidjson::StringBuffer buffer;
-    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
-    document.Accept(writer);
+    qDebug() << "xml2json\n";
+    try{
+        //file<> fdoc("track_orig.xml");
+        rapidxml::xml_document<> doc;
+        doc.parse<0>(const_cast<char *>(xml_str));
+        qDebug() << "xml2json b\n";
+
+        rapidjson::Document document;
+        document.SetObject();
+        qDebug() << "xml2json c\n";
+        rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
+
+        rapidxml::xml_node<> *xmlnode_chd;
+
+        for (xmlnode_chd = doc.first_node(); xmlnode_chd; xmlnode_chd = xmlnode_chd->next_sibling())
+        {
+            //cout << xmlnode_chd->name() << endl;
+            rapidjson::Value jsvalue_chd;
+            jsvalue_chd.SetObject();
+            traverse_node(xmlnode_chd, jsvalue_chd, allocator);
+            document.AddMember(rapidjson::StringRef(xmlnode_chd->name()), jsvalue_chd, allocator);
+            qDebug() << "xml2json d\n";
+        }
+        rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+        document.Accept(writer);
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "xml2json(): Caught exception: \"" << e.what() << "\"\n";
+    }
+    catch (...)
+    {
+        std::cout << "xml2json(): Caught ...\n";
+    }
+
+    qDebug() << "xml2json e\n";
+    qDebug() << buffer.GetString() << "\n";
+    qDebug() << "xml2json E\n";
     return buffer.GetString();
 }
 

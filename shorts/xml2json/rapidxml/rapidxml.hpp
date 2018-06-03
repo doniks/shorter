@@ -1619,16 +1619,20 @@ namespace rapidxml
                     if (xml_node<Ch> *node = parse_node<Flags>(text)) {
                         this->append_node(node);
                         if (Flags & (parse_open_only|parse_parse_one)) {
-                            if (node->type() == node_element)
+                            if (node->type() == node_element) {
                                 break;
+                            }
                         }
                     }
                 }
                 else
+                {
                     RAPIDXML_PARSE_ERROR("expected <", text);
+                }
             }
             return text;
         }
+
         template<int Flags>
         Ch * parse(Ch * text, xml_document<Ch> & parent)
         {
@@ -2333,8 +2337,9 @@ namespace rapidxml
                 ++text;
                 Ch *name = text;
                 skip<node_name_pred, Flags>(text);
-                if (text == name)
+                if (text == name){
                     RAPIDXML_PARSE_ERROR("expected element local name", text);
+                }
                 element->name(name, text - name);
             } else {
                 element->name(prefix, text - prefix);
@@ -2357,13 +2362,19 @@ namespace rapidxml
             {
                 ++text;
                 if (*text != Ch('>'))
+                {
                     RAPIDXML_PARSE_ERROR("expected >", text);
+                }
                 ++text;
                 if (Flags & parse_open_only)
+                {
                     RAPIDXML_PARSE_ERROR("only_only, but closed", text);
+                }
             }
             else
+            {
                 RAPIDXML_PARSE_ERROR("expected >", text);
+            }
 
             // Place zero terminator after name
             if (!(Flags & parse_no_string_terminators)) {

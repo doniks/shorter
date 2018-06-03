@@ -15,7 +15,7 @@ MainView {
     id: mainView
 
     objectName: "mainView"
-//    applicationName: "doniks.shorter"
+    //applicationName: "doniks.shorter"
     anchorToKeyboard: true
 
     width: units.gu(46)
@@ -36,7 +36,7 @@ MainView {
 
         DB.adjustDb(dbParams)
 
-        if (dbParams.oldDbVersion != dbParams.newDbVersion) {
+        if (dbParams.oldDbVersion !== dbParams.newDbVersion) {
             optionsKeeper.setDbVersion(dbParams.newDbVersion)
         }
 
@@ -53,7 +53,7 @@ MainView {
         console.log("Refresh", topicId)
 
         console.log("REFRESH TOPIC", topicId)
-        if (topicId == -2) {
+        if (topicId === -2) {
             refreshSavedTab()
             return
         }
@@ -69,16 +69,16 @@ MainView {
     function reloadViews(tagId) {
         tagId = tagId || 0
 
-        if (tagId == 0)
+        if (tagId === 0)
             shortsTab.reloadTab("reloadViews")
-        else topicTab.reloadTab("reloadViews")
+        else
+            topicTab.reloadTab("reloadViews")
     }
 
     function reloadMainView() {
         mainPage.reloadPageContent()
     }
 
-    // refresh "Saved" Tab
     function refreshSavedTab() {
         savedTab.reloadTab()
     }
@@ -124,7 +124,8 @@ MainView {
             // Add to appropriate column.
             if (toNext)
                 pageStack.addPageToNextColumn(sourcePage, page, props)
-            else pageStack.addPageToCurrentColumn(sourcePage, page, props)
+            else 
+                pageStack.addPageToCurrentColumn(sourcePage, page, props)
 
             if (page.reloadPageContent)
                 page.reloadPageContent()
@@ -154,7 +155,7 @@ MainView {
             var tagId = article.tagId
             var articleId = article.id
 
-            savedTab.updateFavouriteInModel(article, fav) // SavedTab requires article object, not articleId.
+            savedTab.updateFavouriteInModel(article, fav) 
             shortsTab.updateFavouriteInModel(articleId, fav)
             topicTab.updateFavouriteInModel(articleId, fav)
         }
@@ -168,16 +169,23 @@ MainView {
 
             if (event.modifiers & Qt.ControlModifier) {
                 if (event.key === Qt.Key_A) {
-                    appendFeedPageLoader.doAction(function(page) { pageStack.push(page, mainPage) }) // pageStack.push(appendFeedPage, mainPage)
+                    appendFeedPageLoader.doAction(function(page) { 
+                        pageStack.push(page, mainPage) 
+                    } )
+                    // pageStack.push(appendFeedPage, mainPage)
                 } else if (event.key === Qt.Key_R) {
                     refresh()
                 }
             }
 
-            if (event.key == Qt.Key_Left) {
-                articlePageLoader.doAction(function(page) { page.articleView.showPrevArticle() })
-            } else if (event.key == Qt.Key_Right) {
-                articlePageLoader.doAction(function(page) { page.articleView.showNextArticle() })
+            if (event.key === Qt.Key_Left) {
+                articlePageLoader.doAction(function(page) { 
+                    page.articleView.showPrevArticle() 
+                })
+            } else if (event.key === Qt.Key_Right) {
+                articlePageLoader.doAction(function(page) { 
+                    page.articleView.showNextArticle() 
+                })
             }
         }
 
@@ -261,8 +269,10 @@ MainView {
                 Connections {
                     target: articlePage.articleView
 
-                    onArticleStatusChanged: pageStack.updateStatusInModels(article, status)
-                    onArticleFavouriteChanged: pageStack.updateFavouriteInModels(article, favourite)
+                    onArticleStatusChanged: 
+                        pageStack.updateStatusInModels(article, status)
+                    onArticleFavouriteChanged: 
+                        pageStack.updateFavouriteInModels(article, favourite)
                 }
             }
         }

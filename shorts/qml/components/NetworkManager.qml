@@ -63,8 +63,8 @@ Item {
             if (__useGFA) {
                 googleFeedApi.loadFeed(currentFeed.source)
             } else { 
-	        nonGoogleFeedApi.loadFeed(currentFeed.source)
-	    }
+                nonGoogleFeedApi.loadFeed(currentFeed.source)
+            }
         }
 
         function cancelDownload() {
@@ -80,8 +80,10 @@ Item {
             var entries = responseData.feed.entries
             var f = responseData.feed
 
-            DB.updateFeedByXml(feedId, f.feedUrl === f.link ? feedLink : f.link, // Sometimes google fails and sends site link equal to feed url.
-                                                              f.description, f.title)
+            DB.updateFeedByXml(feedId
+                               , f.feedUrl === f.link ? feedLink : f.link
+                               , // Sometimes google fails and sends site link equal to feed url.
+                               f.description, f.title)
             console.log(" -------- UPDATE INFO -------- ")
             console.log(f.title, f.link, f.feedUrl, f.description)
 
@@ -124,8 +126,8 @@ Item {
             var entries = responseData.item
             var f = responseData
 
-            var fde = f.description == undefined ? "" : f.description["#text"] == undefined ? f.description : f.description["#text"]
-            var fti = f.title == undefined ? "" : f.title["#text"] == undefined ? f.title : f.title["#text"]
+            var fde = f.description === undefined ? "" : f.description["#text"] === undefined ? f.description : f.description["#text"]
+            var fti = f.title === undefined ? "" : f.title["#text"] === undefined ? f.title : f.title["#text"]
 
             DB.updateFeedByXml(feedId, feedLink, fde, fti)
             console.log(" -------- UPDATE INFO (NG) -------- ")
@@ -138,13 +140,13 @@ Item {
             for (var i = 0; i < maxLength; i++) {
                 var e = entries[i]
 
-                var ti = e.title == undefined ? "" : e.title["#text"] == undefined ? e.title : e.title["#text"]
-                var li = e.link == undefined ? "" : e.link["#text"] == undefined ? e.link : e.link["#text"]
-                var au = e.author == undefined ? "" : e.author["#text"] == undefined ? e.author : e.author["#text"]
-                var creator = e.creator == undefined ? "" : e.creator["#text"] == undefined ? e.creator : e.creator["#text"]
-                var de = e.description == undefined ? "" : e.description["#text"] == undefined ? e.description : e.description["#text"]
-                var pu = e.pubDate == undefined ? "" : e.pubDate["#text"] == undefined ? e.pubDate : e.pubDate["#text"]
-                var co = e.content == undefined ? "" : e.content["#text"] == undefined ? e.content : e.content["#text"]
+                var ti = e.title === undefined ? "" : e.title["#text"] === undefined ? e.title : e.title["#text"]
+                var li = e.link === undefined ? "" : e.link["#text"] === undefined ? e.link : e.link["#text"]
+                var au = e.author === undefined ? "" : e.author["#text"] === undefined ? e.author : e.author["#text"]
+                var creator = e.creator === undefined ? "" : e.creator["#text"] === undefined ? e.creator : e.creator["#text"]
+                var de = e.description === undefined ? "" : e.description["#text"] === undefined ? e.description : e.description["#text"]
+                var pu = e.pubDate === undefined ? "" : e.pubDate["#text"] === undefined ? e.pubDate : e.pubDate["#text"]
+                var co = e.content === undefined ? "" : e.content["#text"] === undefined ? e.content : e.content["#text"]
 
                 var articleImage = utilities.htmlGetImg(de)
                 if (!articleImage.length)
@@ -191,7 +193,9 @@ Item {
                     console.log("XML NETWORK GFA:", JSON.stringify(result))
                     if (operationStatus == "success")
                         operationStatus = "withErrors"
-                } else d.updateFeedInfo(d.currentFeed.id, d.currentFeed.link, result.responseData)
+                } else {
+                    d.updateFeedInfo(d.currentFeed.id, d.currentFeed.link, result.responseData)
+                }
 
                 d.updateNextFeed()
             }
@@ -213,12 +217,12 @@ Item {
                         operationStatus = "withErrors"
                 } else {
                     console.log("!result.rss", 
-                                "rss", result.rss, 
-                                "json", result.json, 
-                                "atom", result.atom, 
-                                "feed", result.feed,
-                                "xml", result.xml,
-                                "xmlns", result.xmlns
+                                "rss=", result.rss,
+                                "json=", result.json,
+                                "atom=", result.atom,
+                                "feed=", result.feed,
+                                "xml=", result.xml,
+                                "xmlns=", result.xmlns
                                )
                     console.log("operationStatus", operationStatus)
                     console.log("XML NETWORK NGA:", JSON.stringify(result))

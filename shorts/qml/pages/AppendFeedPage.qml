@@ -207,7 +207,7 @@ Page {
                     console.log("url")
                     if (userInput.indexOf("http://") !== 0) {
                         userInput = "http://" + userInput
-		    }
+                    }
 
                     // FIXME: find the actual title etc without the broken google api
                     // googleFeedApi.loadFeed(userInput)
@@ -260,10 +260,16 @@ Page {
 
                 objectName: "feedCheckbox-" + model.title
                 onCheckedChanged: {
+                    checkRunning.running = true
+                    urlprefix = model.title
+                    warn.text = model.title
+
+
                     searchResultsModel.setProperty(index, "isSelected", checked)
                     if (checked)
                         selectedCount++
-                    else selectedCount--
+                    else
+                        selectedCount--
                 }
             }
         }

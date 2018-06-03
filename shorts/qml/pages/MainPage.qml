@@ -425,9 +425,9 @@ Page {
     function showTopicById(topicId, topicTitle) {
         console.log("ShowTopicById", topicId)
         var pageToAdd
-        if (topicId == 0)
+        if (topicId === 0)
             pageToAdd = shortsTab
-        else if (topicId == -1)
+        else if (topicId === -1)
             pageToAdd = savedTab
         else {
             topicTab.topicId = topicId

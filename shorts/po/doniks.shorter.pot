@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 16:02+0000\n"
+"POT-Creation-Date: 2018-06-03 16:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,11 +97,7 @@ msgstr ""
 msgid "Search results"
 msgstr ""
 
-#: ../qml/pages/AppendFeedPage.qml:260
-msgid "bla"
-msgstr ""
-
-#: ../qml/pages/AppendFeedPage.qml:289 ../qml/pages/CreateTopicPage.qml:145
+#: ../qml/pages/AppendFeedPage.qml:285 ../qml/pages/CreateTopicPage.qml:145
 msgid "No feeds"
 msgstr ""
 

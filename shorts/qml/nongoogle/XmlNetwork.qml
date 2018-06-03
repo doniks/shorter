@@ -13,22 +13,24 @@ QtObject {
     /* Load feed by URL.
      */
     function loadFeed(feedUrl, num) {
+        console.log("XmlNetwork.loadFeed(", feedUrl, num, ")")
         abort(true)
 
         if (num)
             num = Math.min(num, 100)
-        else num = 50
+        else
+            num = 50
 
         __doc = new XMLHttpRequest()
         var doc = __doc
 
         doc.onreadystatechange = function() {
-
-//            print("xmlnetwork onreadystatechange: ", doc.readyState, doc.status, feedUrl)
+            console.log("a4.0 (", XMLHttpRequest.DONE, ")")
+            print("xmlnetwork onreadystatechange: ", doc.readyState, doc.status, feedUrl)
             if (doc.readyState === XMLHttpRequest.DONE) {
 
                 var resObj
-                if (doc.status == 200) {
+                if (doc.status === 200) {
                     resObj = utilities.xmlToJson(doc.responseText)
                 } else { // Error
                     resObj = {"responseDetails" : doc.statusText,
@@ -36,6 +38,7 @@ QtObject {
                 }
 
                 __doc = null
+                console.log(resObj.size);
                 loadResult(resObj)
             } else {
                 //console.log("doc.readyState is not DONE, but:", doc.readyState)
@@ -62,8 +65,8 @@ QtObject {
     /* Return true if some kind of errors detected.
      */
     function checkForErrors(result) {
-        if (result.responseStatus == 200 ||   // HTTP OK
-                result.responseStatus == 0) { // ABORTED
+        if (result.responseStatus === 200 ||   // HTTP OK
+                result.responseStatus === 0) { // ABORTED
             return false
         }
 

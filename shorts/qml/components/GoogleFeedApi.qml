@@ -23,7 +23,7 @@ QtObject {
             if (doc.readyState === XMLHttpRequest.DONE) {
 
                 var resObj
-                if (doc.status == 200) {
+                if (doc.status === 200) {
                     resObj = JSON.parse(doc.responseText)
                 } else { // Error
                     resObj = {"responseDetails" : doc.statusText,

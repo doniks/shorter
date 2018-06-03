@@ -13,9 +13,11 @@ Utilities::Utilities(QObject *parent) :
 
 QJsonObject Utilities::xmlToJson(const QString &xml)
 {
+    qDebug() << "xmlToJson\n" ;
     QByteArray ba = xml.toLocal8Bit();
     char* ch = ba.data();
     const std::string json = xml2json(ch);
+    qDebug() << "json.length=" << json.length() << "\n";
 //    qDebug() << "json: " << QString::fromStdString(json) ;
     return QJsonDocument::fromJson(QString::fromStdString(json).toLocal8Bit()).object();
 }
