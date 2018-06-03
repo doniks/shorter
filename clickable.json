@@ -1,5 +1,5 @@
 {
-"template": "cmake",
-"ssh": "nexus"
+"template": "cmake", 
+"ssh": "ubuntu-phablet" 
 }
 
