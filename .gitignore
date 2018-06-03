@@ -29,12 +29,20 @@ Makefile*
 
 *.autosave
 
-# QtCtreator Qml
+# QtCtreator (I think)
 *.qmlproject.user
 *.qmlproject.user.*
+*.creator.user
+*.creator
+*.includes
+*.config
+*.creator
+*.includes
+
 
 # QtCtreator CMake
 CMakeLists.txt.user
 
 build/
 _trash/
+
