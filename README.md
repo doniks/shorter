@@ -3,16 +3,23 @@ Shorter is a news reader for Ubuntu Touch (ubports.com)
 
 Shorter was forked from Shorts reboot, which in turn was forked from Shorts
 
-# hacking
+# Development
 
 So you want to hack on Shorter? Awesome! Do the following:
 
-Install https://github.com/bhdouglass/clickable 
 
-Connect your Ubuntu Touch device with an USB cable and then on the console execute
-
+ * Install build tools
+```
+sudo apt install git build-essential
+```
+ * Install [clickable](https://docs.ubports.com/en/latest/appdev/clickable/setup.html)
+ * Connect your Ubuntu Touch device with an USB cable
+ * Retrieve the source code
 ```
 git clone https://github.com/doniks/shorter
+```
+ * Build and test
+```
 cd shorter 
 clickable
 ```
@@ -20,7 +27,6 @@ clickable
 This should retrieve the source code, build it, install it on the device and run the application. 
 
 I'm happy to receive your contribution, just get in touch on github!
-
-Doniks
+doniks
 
 
