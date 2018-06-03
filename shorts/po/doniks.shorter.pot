@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Canonical Ltd.
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the  package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-27 23:49+0000\n"
+"POT-Creation-Date: 2018-06-03 16:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgid "Add feeds"
 msgstr ""
 
 #: ../qml/nongoogle/AppendNGFeedPage.qml:40
-#: ../qml/pages/TopicManagementPage.qml:21 ../qml/shorts-app.qml:368
+#: ../qml/pages/TopicManagementPage.qml:21 ../qml/shorts-app.qml:378
 msgid "Cancel"
 msgstr ""
 
@@ -97,7 +97,11 @@ msgstr ""
 msgid "Search results"
 msgstr ""
 
-#: ../qml/pages/AppendFeedPage.qml:279 ../qml/pages/CreateTopicPage.qml:145
+#: ../qml/pages/AppendFeedPage.qml:260
+msgid "bla"
+msgstr ""
+
+#: ../qml/pages/AppendFeedPage.qml:289 ../qml/pages/CreateTopicPage.qml:145
 msgid "No feeds"
 msgstr ""
 
@@ -190,7 +194,7 @@ msgstr ""
 msgid "All articles"
 msgstr ""
 
-#: ../qml/pages/MainPage.qml:185 ../qml/shorts-app.qml:194
+#: ../qml/pages/MainPage.qml:185 ../qml/shorts-app.qml:202
 msgid "Saved"
 msgstr ""
 
@@ -247,23 +251,23 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: ../qml/shorts-app.qml:202 shorter.desktop.in.in.h:1
+#: ../qml/shorts-app.qml:210 shorter.desktop.in.in.h:1
 msgid "Shorter"
 msgstr ""
 
-#: ../qml/shorts-app.qml:360
+#: ../qml/shorts-app.qml:370
 msgid "Checking for new articles"
 msgstr ""
 
-#: ../qml/shorts-app.qml:384
+#: ../qml/shorts-app.qml:394
 msgid "Perhaps some of the channels have not been updated."
 msgstr ""
 
-#: ../qml/shorts-app.qml:385
+#: ../qml/shorts-app.qml:395
 msgid "Errors occurred during the update"
 msgstr ""
 
-#: ../qml/shorts-app.qml:399
+#: ../qml/shorts-app.qml:409
 msgid "Ok"
 msgstr ""
 
