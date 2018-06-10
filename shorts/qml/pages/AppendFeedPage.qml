@@ -168,12 +168,12 @@ Page {
             id: tfFeedUrl
 
             placeholderText: i18n.tr("Enter an URL")
-
             width: parent.width - units.gu(4)
             // height:units.gu(5)
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
+            inputMethodHints:Qt.ImhNoAutoUppercase && Qt.ImhNoPredictiveText
             primaryItem: Icon {
                 height: parent.height * 0.5
                 width: height
@@ -261,8 +261,8 @@ Page {
                 objectName: "feedCheckbox-" + model.title
                 onCheckedChanged: {
                     checkRunning.running = true
-                    urlprefix = model.title
-                    warn.text = model.title
+                    //urlprefix = model.title
+                    //warn.text = model.title
 
 
                     searchResultsModel.setProperty(index, "isSelected", checked)

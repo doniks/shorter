@@ -15,7 +15,7 @@ MainView {
     id: mainView
 
     objectName: "mainView"
-    //applicationName: "doniks.shorter"
+    applicationName: "doniks.shorter"
     anchorToKeyboard: true
 
     width: units.gu(46)

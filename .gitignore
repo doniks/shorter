@@ -38,7 +38,7 @@ Makefile*
 *.config
 *.creator
 *.includes
-
+*~
 
 # QtCtreator CMake
 CMakeLists.txt.user

@@ -1,5 +1,5 @@
 # shorter
-Shorter is a news reader for Ubuntu Touch (ubports.com)
+Shorter is an offline news reader for Ubuntu Touch
 
 Shorter was forked from Shorts reboot, which in turn was forked from Shorts
 
@@ -21,10 +21,10 @@ git clone https://github.com/doniks/shorter
  * Build and test
 ```
 cd shorter 
-clickable
+clickable --sdk 16.04
 ```
 
-This should retrieve the source code, build it, install it on the device and run the application. 
+This should retrieve the source code, build it, install the package on the device and run the application. 
 
 I'm happy to receive your contribution, just get in touch on github!
 doniks
